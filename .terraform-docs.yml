@@ -1,7 +1,5 @@
 formatter: "markdown table"
 
-version: ""
-
 header-from: main.tf
 footer-from: ""
 
@@ -48,7 +46,8 @@ content: |-
 
   ```hcl
   module "eks_operation_scheduler" {
-    source = "gianniskt/eks-operation-scheduler/aws"
+    source  = "gianniskt/eks-operation-scheduler/aws"
+    version = "~> 1.0"
 
     clusters = {
       dev-cluster = {
@@ -90,7 +89,8 @@ content: |-
 
   ```hcl
   module "eks_operation_scheduler" {
-    source = "gianniskt/eks-operation-scheduler/aws"
+    source  = "gianniskt/eks-operation-scheduler/aws"
+    version = "~> 1.0"
 
     clusters = {
       dev-cluster = {

@@ -7,7 +7,7 @@ This Terraform module provisions AWS Lambda functions and EventBridge (CloudWatc
 
 ## Features
 
-- 🕐 **Flexible Scheduling**: Weekly or monthly schedules with customizable start/stop times [UTC timezone]
+- 🕐 **Flexible Scheduling**: Weekly or monthly schedules with customizable start/stop times
 - 💰 **Cost Optimization**: Automatically scale node groups to zero during off-hours
 - 🔒 **Least-Privilege IAM**: Secure IAM roles with minimal required permissions
 - 📊 **CloudWatch Integration**: Full logging and monitoring support
@@ -39,8 +39,9 @@ For each cluster/node-group defined in the `clusters` variable, two workflows ar
 ### Basic Example
 
 ```hcl
-module "eks_scheduler" {
-  source = "gianniskt/eks-operation-scheduler/aws"
+module "eks_operation_scheduler" {
+  source  = "gianniskt/eks-operation-scheduler/aws"
+  version = "~> 1.0"
 
   clusters = {
     dev-cluster = {
@@ -81,8 +82,9 @@ module "eks_scheduler" {
 ### Multiple Clusters Example
 
 ```hcl
-module "eks_scheduler" {
-  source = "gianniskt/eks-operation-scheduler/aws"
+module "eks_operation_scheduler" {
+  source  = "gianniskt/eks-operation-scheduler/aws"
+  version = "~> 1.0"
 
   clusters = {
     dev-cluster = {
@@ -329,7 +331,7 @@ See the [`examples/`](examples/) directory for complete usage examples:
 
 ## License
 
-Apache-2.0 License
+MIT License
 
 ## Contributing
 
