@@ -329,7 +329,7 @@ See the [`examples/`](examples/) directory for complete usage examples:
 
 ## License
 
-MIT License
+Apache-2.0 License
 
 ## Contributing
 
