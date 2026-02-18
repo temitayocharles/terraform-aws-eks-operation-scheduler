@@ -23,11 +23,11 @@ resource "aws_iam_role" "lambda_exec" {
   })
 
   tags = merge(var.tags, {
-    Name        = "eks-scheduler-${each.value.cluster_key}-${each.value.action}"
-    Cluster     = each.value.cluster_name
-    NodeGroup   = each.value.node_group_name
-    Action      = each.value.action
-    ManagedBy   = "terraform"
+    Name      = "eks-scheduler-${each.value.cluster_key}-${each.value.action}"
+    Cluster   = each.value.cluster_name
+    NodeGroup = each.value.node_group_name
+    Action    = each.value.action
+    ManagedBy = "terraform"
   })
 }
 
@@ -102,12 +102,12 @@ resource "aws_lambda_function" "eks_scheduler" {
   }
 
   tags = merge(var.tags, {
-    Name        = "eks-scheduler-${each.value.cluster_key}-${each.value.action}"
-    Cluster     = each.value.cluster_name
-    NodeGroup   = each.value.node_group_name
-    Action      = each.value.action
-    Enabled     = tostring(each.value.enabled)
-    ManagedBy   = "terraform"
+    Name      = "eks-scheduler-${each.value.cluster_key}-${each.value.action}"
+    Cluster   = each.value.cluster_name
+    NodeGroup = each.value.node_group_name
+    Action    = each.value.action
+    Enabled   = tostring(each.value.enabled)
+    ManagedBy = "terraform"
   })
 }
 
@@ -135,11 +135,11 @@ resource "aws_cloudwatch_event_rule" "eks_scheduler" {
   state               = each.value.enabled ? "ENABLED" : "DISABLED"
 
   tags = merge(var.tags, {
-    Name        = "eks-scheduler-${each.value.cluster_key}-${each.value.action}"
-    Cluster     = each.value.cluster_name
-    NodeGroup   = each.value.node_group_name
-    Action      = each.value.action
-    ManagedBy   = "terraform"
+    Name      = "eks-scheduler-${each.value.cluster_key}-${each.value.action}"
+    Cluster   = each.value.cluster_name
+    NodeGroup = each.value.node_group_name
+    Action    = each.value.action
+    ManagedBy = "terraform"
   })
 }
 

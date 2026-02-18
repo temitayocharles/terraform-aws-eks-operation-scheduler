@@ -28,7 +28,7 @@ module "eks_operation_scheduler" {
       # Start on 1st Monday at 8 AM
       start_schedule = {
         type   = "monthly"
-        week   = 1  # 1st occurrence
+        week   = 1 # 1st occurrence
         day    = "Monday"
         hour   = 8
         minute = 0
@@ -37,7 +37,7 @@ module "eks_operation_scheduler" {
       # Stop on 1st Monday at 6 PM
       stop_schedule = {
         type   = "monthly"
-        week   = 1  # 1st occurrence
+        week   = 1 # 1st occurrence
         day    = "Monday"
         hour   = 18
         minute = 0
@@ -60,7 +60,7 @@ module "eks_operation_scheduler" {
       # Start on 2nd Wednesday at 9 AM
       start_schedule = {
         type   = "monthly"
-        week   = 2  # 2nd occurrence
+        week   = 2 # 2nd occurrence
         day    = "Wednesday"
         hour   = 9
         minute = 0
@@ -69,7 +69,7 @@ module "eks_operation_scheduler" {
       # Stop on 2nd Wednesday at 5 PM
       stop_schedule = {
         type   = "monthly"
-        week   = 2  # 2nd occurrence
+        week   = 2 # 2nd occurrence
         day    = "Wednesday"
         hour   = 17
         minute = 0

@@ -20,11 +20,11 @@ variable "clusters" {
       hour   = number
       minute = number
     })
-    min_size        = number
-    desired_size    = number
-    max_size        = number
-    enabled_start   = optional(bool, true)
-    enabled_stop    = optional(bool, true)
+    min_size      = number
+    desired_size  = number
+    max_size      = number
+    enabled_start = optional(bool, true)
+    enabled_stop  = optional(bool, true)
   }))
 }
 
